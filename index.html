@@ -1,0 +1,1631 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SUPERCAR WORLD | Ferrari & Lamborghini</title>
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/ru/archive/1/1d/20221207173001%21Lamborghini_Logo1.png">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background: #090909; color: white; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: inherit; }
+img { display: block; max-width: 100%; }
+
+:root {
+    --red: #e51d2a;
+    --yellow: #f4d000;
+    --dark: #090909;
+    --card: #151515;
+    --gray: #aaa;
+}
+
+.container {
+    width: 88%;
+    max-width: 1450px;
+    margin: auto;
+}
+
+.section { padding: 100px 0; }
+
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.heading small {
+    color: var(--red);
+    letter-spacing: 5px;
+    font-weight: 800;
+    font-size: 11px;
+}
+
+.heading h2 {
+    font-size: clamp(28px, 4vw, 46px);
+    font-weight: 900;
+    margin-top: 15px;
+}
+
+.heading p {
+    color: var(--gray);
+    font-size: 13px;
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+/* HEADER */
+
+header {
+    height: 85px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #080808ed;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #ffffff18;
+}
+
+.header-inner {
+    height: 100%;
+    width: 88%;
+    max-width: 1450px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span { color: var(--red); }
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 11px;
+    color: #bbb;
+    transition: .3s;
+}
+
+nav a:hover { color: var(--red); }
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.fav-btn {
+    background: #1b1b1b;
+    border: 1px solid #ffffff20;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.header-btn {
+    background: var(--red);
+    color: white;
+    border: 0;
+    padding: 13px 19px;
+    font-size: 11px;
+    font-weight: 800;
+    border-radius: 4px;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 28px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    padding: 140px 7% 80px;
+    display: flex;
+    align-items: center;
+    background:
+    linear-gradient(90deg, #080808 3%, #080808dc 42%, #08080835 100%),
+    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=90')
+    center/cover;
+}
+
+.hero-content { max-width: 750px; }
+
+.hero-label {
+    color: var(--red);
+    font-size: 12px;
+    letter-spacing: 6px;
+    font-weight: 800;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 9vw, 105px);
+    line-height: 1.02;
+    font-weight: 900;
+    margin: 25px 0;
+}
+
+.hero h1 span { color: var(--red); }
+
+.hero p {
+    color: #bbb;
+    font-size: 14px;
+    line-height: 2;
+    max-width: 530px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.btn-red {
+    background: var(--red);
+    border: 1px solid var(--red);
+    color: white;
+}
+
+.btn-outline {
+    border: 1px solid #ffffff70;
+    color: white;
+}
+
+.btn:hover { transform: translateY(-4px); }
+
+.hero-stats {
+    display: flex;
+    gap: 45px;
+    margin-top: 65px;
+    flex-wrap: wrap;
+}
+
+.hero-stats strong {
+    display: block;
+    font-size: 28px;
+}
+
+.hero-stats span {
+    font-size: 10px;
+    color: #aaa;
+}
+
+/* BRAND SECTION */
+
+.brands { background: #111; }
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.brand-card {
+    height: 390px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.brand-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .6s;
+}
+
+.brand-card:hover img { transform: scale(1.08); }
+
+.brand-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 35px;
+    background: linear-gradient(transparent, #000e);
+}
+
+.brand-overlay h3 {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.brand-overlay p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* CATALOG */
+
+.catalog-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter {
+    background: #1a1a1a;
+    color: #aaa;
+    border: 1px solid #ffffff15;
+    padding: 12px 19px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.filter.active,
+.filter:hover {
+    background: var(--red);
+    color: white;
+}
+
+.search {
+    width: 260px;
+    padding: 13px 16px;
+    background: #171717;
+    color: white;
+    border: 1px solid #ffffff20;
+    outline: none;
+    border-radius: 4px;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.car-card {
+    background: var(--card);
+    border: 1px solid #ffffff12;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--red);
+}
+
+.car-image {
+    height: 225px;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.car-card:hover .car-image img { transform: scale(1.08); }
+
+.car-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--red);
+    padding: 7px 12px;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 3px;
+}
+
+.heart {
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    width: 37px;
+    height: 37px;
+    border: 0;
+    border-radius: 50%;
+    color: white;
+    background: #080808cc;
+    font-size: 20px;
+}
+
+.heart.selected { color: #ff3657; }
+
+.car-info { padding: 22px; }
+
+.car-brand {
+    font-size: 10px;
+    color: var(--red);
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.car-info h3 {
+    font-size: 18px;
+    margin: 12px 0 18px;
+}
+
+.specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 16px 0;
+    border-top: 1px solid #ffffff15;
+    border-bottom: 1px solid #ffffff15;
+}
+
+.spec {
+    font-size: 10px;
+    color: #999;
+}
+
+.spec strong {
+    display: block;
+    font-size: 13px;
+    color: white;
+    margin-top: 6px;
+}
+
+.car-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    gap: 10px;
+}
+
+.price { font-size: 17px; font-weight: 800; }
+
+.details-btn {
+    background: var(--red);
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    padding: 11px 14px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.empty {
+    grid-column: 1/-1;
+    text-align: center;
+    color: #aaa;
+    padding: 50px;
+}
+
+/* COLLECTION */
+
+.collection { background: #111; }
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.collection-card {
+    position: relative;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.collection-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.collection-card:hover img { transform: scale(1.07); }
+
+.collection-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 30px;
+    background: linear-gradient(transparent, #000d);
+}
+
+.collection-text small { color: var(--yellow); letter-spacing: 3px; }
+.collection-text h3 { font-size: 28px; margin-top: 10px; }
+
+/* FEATURES */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: #151515;
+    border: 1px solid #ffffff12;
+    padding: 30px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--yellow);
+}
+
+.feature-icon { font-size: 32px; }
+.feature-card h3 { margin: 18px 0 12px; font-size: 16px; }
+.feature-card p { color: #999; font-size: 12px; line-height: 1.9; }
+
+/* ABOUT */
+
+.about { background: #111; }
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-text small {
+    color: var(--red);
+    letter-spacing: 4px;
+    font-weight: 800;
+}
+
+.about-text h2 {
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.about-text p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.about-stats {
+    display: flex;
+    gap: 35px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.about-stats strong {
+    color: var(--yellow);
+    font-size: 27px;
+    display: block;
+}
+
+.about-stats span {
+    color: #999;
+    font-size: 10px;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+    background:
+    linear-gradient(#080808d9,#080808e8),
+    url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=85') center/cover;
+}
+
+.contact h2 {
+    font-size: clamp(27px, 5vw, 48px);
+    margin: 20px 0;
+}
+
+.contact p {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #050505;
+    padding: 65px 0 20px;
+    border-top: 1px solid #ffffff15;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 35px;
+    padding-bottom: 45px;
+}
+
+.footer-about p {
+    color: #999;
+    font-size: 12px;
+    line-height: 2;
+    margin-top: 20px;
+    max-width: 320px;
+}
+
+.footer-col h4 { font-size: 13px; margin-bottom: 20px; }
+
+.footer-col a {
+    display: block;
+    color: #999;
+    font-size: 11px;
+    margin: 15px 0;
+}
+
+.footer-col a:hover { color: var(--red); }
+
+.footer-bottom {
+    border-top: 1px solid #ffffff15;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #777;
+    font-size: 10px;
+}
+
+/* MODALS */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: #000e;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal.active { display: flex; }
+
+.modal-box {
+    width: 100%;
+    max-width: 550px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #171717;
+    border: 1px solid #ffffff20;
+    border-radius: 9px;
+    position: relative;
+    animation: appear .3s;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-box > img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.modal-content { padding: 25px; }
+.modal-content h2 { margin: 12px 0; }
+.modal-content p { color: #aaa; font-size: 13px; line-height: 1.9; }
+
+.close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background: #080808;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 22px;
+    z-index: 2;
+}
+
+.form-box { padding: 35px; }
+.form-box h2 { margin-bottom: 12px; }
+.form-box p { color: #999; font-size: 12px; margin-bottom: 22px; }
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 14px;
+    background: #222;
+    border: 1px solid #ffffff20;
+    color: white;
+    margin-bottom: 14px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-box textarea { min-height: 90px; resize: vertical; }
+.form-box button { width: 100%; }
+
+/* RESPONSIVE */
+
+@media(max-width: 1000px) {
+    .cars-grid { grid-template-columns: repeat(2,1fr); }
+    .footer-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media(max-width: 700px) {
+    .container, .header-inner { width: 92%; }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        padding: 25px 5%;
+        background: #111;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    nav.show { display: flex; }
+    .menu-btn { display: block; }
+    .header-btn { display: none; }
+
+    .hero { padding: 135px 6% 65px; }
+    .hero h1 { font-size: 53px; }
+    .hero-stats { gap: 25px; }
+
+    .brand-grid, .cars-grid, .collection-grid,
+    .features-grid, .about-grid { grid-template-columns: 1fr; }
+
+    .brand-card { height: 270px; }
+    .collection-card { height: 240px; }
+    .search { width: 100%; }
+    .catalog-top { align-items: stretch; }
+    .filter { padding: 10px 13px; }
+    .about-image { height: 280px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .section { padding: 75px 0; }
+}
+
+@media(max-width: 400px) {
+    .footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <div class="header-inner">
+
+        <a href="#home" class="logo">SUPER<span>CAR.</span></a>
+
+        <nav id="nav">
+            <a href="#home">Bosh sahifa</a>
+            <a href="#brands">Brendlar</a>
+            <a href="#catalog">Katalog</a>
+            <a href="#collection">Collection</a>
+            <a href="#about">Biz haqimizda</a>
+            <a href="#contact">Aloqa</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="fav-btn" onclick="showFavorites()">♥ <span id="favCount">0</span></button>
+            <button class="header-btn" onclick="openTest()">TEST DRIVE</button>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </div>
+
+    </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="hero-label">WELCOME TO SUPERCAR WORLD</span>
+
+        <h1>MUXAMMADQODIR<br><span>SUPPER CAR</span></h1>
+
+        <p>
+            Ferrari va Lamborghini olamiga xush kelibsiz.
+            Bu yerda tezlik, kuch, innovatsiya va noyob
+            dizayn birlashadi. Haqiqiy supercar dunyosini kashf eting!
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#catalog" class="btn btn-red">AVTOMOBILLARNI KO'RISH →</a>
+            <a href="#brands" class="btn btn-outline">BRENDLAR</a>
+        </div>
+
+        <div class="hero-stats">
+            <div>
+                <strong>20+</strong>
+                <span>Supercar modellari</span>
+            </div>
+            <div>
+                <strong>02</strong>
+                <span>Premium brend</span>
+            </div>
+            <div>
+                <strong>100%</strong>
+                <span>Sport dizayn</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BRANDS -->
+
+<section class="section brands" id="brands">
+    <div class="container">
+
+        <div class="heading">
+            <small>LEGENDARY BRANDS</small>
+            <h2>IKKI AFSONAVIY BREND</h2>
+            <p>Dunyoning mashhur supercar ishlab chiqaruvchilari.</p>
+        </div>
+
+        <div class="brand-grid">
+
+            <div class="brand-card" onclick="setFilter('Ferrari')">
+                <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1100&q=85" alt="Ferrari">
+                <div class="brand-overlay">
+                    <h3>FERRARI</h3>
+                    <p>THE PRANCING HORSE</p>
+                </div>
+            </div>
+
+            <div class="brand-card" onclick="setFilter('Lamborghini')">
+                <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1100&q=85" alt="Lamborghini">
+                <div class="brand-overlay">
+                    <h3>LAMBORGHINI</h3>
+                    <p>EXPECT THE UNEXPECTED</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CATALOG -->
+
+<section class="section" id="catalog">
+    <div class="container">
+
+        <div class="heading">
+            <small>SUPERCAR COLLECTION</small>
+            <h2>AVTOMOBILLAR KATALOGI</h2>
+            <p>O'zingiz yoqtirgan supercar modelini tanlang.</p>
+        </div>
+
+        <div class="catalog-top">
+
+            <div class="filters">
+                <button class="filter active" data-filter="All" onclick="setFilter('All')">Barchasi</button>
+                <button class="filter" data-filter="Ferrari" onclick="setFilter('Ferrari')">Ferrari</button>
+                <button class="filter" data-filter="Lamborghini" onclick="setFilter('Lamborghini')">Lamborghini</button>
+            </div>
+
+            <input type="search" class="search" id="search"
+            placeholder="🔍 Avtomobil qidirish..." oninput="renderCars()">
+
+        </div>
+
+        <div class="cars-grid" id="carsGrid"></div>
+
+    </div>
+</section>
+
+<!-- COLLECTION -->
+
+<section class="section collection" id="collection">
+    <div class="container">
+
+        <div class="heading">
+            <small>EXCLUSIVE COLLECTION</small>
+            <h2>SUPERCAR UNIVERSE</h2>
+            <p>Har bir avtomobil o'ziga xos tarix va xarakterga ega.</p>
+        </div>
+
+        <div class="collection-grid">
+
+            <div class="collection-card">
+                <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1000&q=85" alt="Ferrari">
+                <div class="collection-text">
+                    <small>ITALIAN EXCELLENCE</small>
+                    <h3>FERRARI PERFORMANCE</h3>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1000&q=85" alt="Lamborghini">
+                <div class="collection-text">
+                    <small>PURE ADRENALINE</small>
+                    <h3>LAMBORGHINI POWER</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+
+<section class="section">
+    <div class="container">
+
+        <div class="heading">
+            <small>OUR FEATURES</small>
+            <h2>BIZNING IMKONIYATLAR</h2>
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">🏎️</div>
+                <h3>Supercar katalogi</h3>
+                <p>Ferrari va Lamborghini avtomobillarining turli modellarini ko'ring.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <h3>Texnik ma'lumotlar</h3>
+                <p>Quvvat, ishlab chiqarilgan yil va boshqa xususiyatlar bilan tanishing.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">❤️</div>
+                <h3>Sevimlilar</h3>
+                <p>O'zingiz yoqtirgan supercarlarni alohida ro'yxatda saqlang.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔎</div>
+                <h3>Aqlli qidiruv</h3>
+                <p>Kerakli avtomobilni nomi orqali tezda toping.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Batafsil ma'lumot</h3>
+                <p>Har bir avtomobilning tavsifi va imkoniyatlarini o'rganing.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🏁</div>
+                <h3>Test Drive</h3>
+                <p>Sinov haydovi uchun so'rov formasini to'ldiring.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="section about" id="about">
+    <div class="container about-grid">
+
+        <img class="about-image"
+        src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85"
+        alt="Supercar">
+
+        <div class="about-text">
+
+            <small>ABOUT SUPERCAR WORLD</small>
+
+            <h2>ODDIY AVTOMOBILDAN KO'PROQ.</h2>
+
+            <p>
+                SUPERCAR WORLD — Ferrari va Lamborghini avtomobillariga
+                bag'ishlangan premium platforma.
+
+                Biz supercar ishqibozlariga avtomobillarning dizayni,
+                texnologiyasi va texnik imkoniyatlarini bir joyda
+                o'rganish imkonini beramiz.
+
+                Har bir model — o'ziga xos muhandislik va dizayn namunasi.
+            </p>
+
+            <div class="about-stats">
+                <div>
+                    <strong>20+</strong>
+                    <span>Avtomobil</span>
+                </div>
+                <div>
+                    <strong>02</strong>
+                    <span>Brend</span>
+                </div>
+                <div>
+                    <strong>2026</strong>
+                    <span>Loyiha</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+    <div class="container">
+
+        <small style="color:var(--yellow);letter-spacing:5px">
+            CONTACT US
+        </small>
+
+        <h2>YOUR DREAM SUPERCAR IS WAITING.</h2>
+
+        <p>O'zingiz yoqtirgan avtomobilni tanlang va batafsil ma'lumot oling.</p>
+
+        <button class="btn btn-red" onclick="openTest()">
+            TEST DRIVE SO'ROVI →
+        </button>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-about">
+                <a href="#home" class="logo">SUPER<span>CAR.</span></a>
+                <p>
+                    Ferrari va Lamborghini olamiga xush kelibsiz.
+                    Kuch, tezlik va mukammal dizayn bir joyda.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>SAHIFALAR</h4>
+                <a href="#home">Bosh sahifa</a>
+                <a href="#brands">Brendlar</a>
+                <a href="#catalog">Katalog</a>
+                <a href="#about">Biz haqimizda</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>BRENDLAR</h4>
+                <a href="#catalog" onclick="setFilter('Ferrari')">Ferrari</a>
+                <a href="#catalog" onclick="setFilter('Lamborghini')">Lamborghini</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>ALOQA</h4>
+                <a href="#contact">Bog'lanish</a>
+                <a href="#services">Xizmatlar</a>
+                <a href="#catalog">Avtomobillar</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 SUPERCAR WORLD. Barcha huquqlar himoyalangan.</span>
+            <span>FERRARI × LAMBORGHINI | PREMIUM AUTOMOTIVE</span>
+        </div>
+
+    </div>
+</footer>
+
+<!-- DETAILS MODAL -->
+
+<div class="modal" id="detailsModal" onclick="outsideClose(event,'detailsModal')">
+    <div class="modal-box">
+
+        <button class="close" onclick="closeModal('detailsModal')">×</button>
+
+        <img id="detailImage" src="" alt="Avtomobil">
+
+        <div class="modal-content">
+            <span class="car-brand" id="detailBrand"></span>
+            <h2 id="detailName"></h2>
+            <p id="detailDescription"></p>
+            <br>
+            <p id="detailSpecs"></p>
+            <h2 id="detailPrice" style="color:var(--yellow);margin-top:20px"></h2>
+            <br>
+            <button class="btn btn-red" onclick="closeModal('detailsModal');openTest()">
+                TEST DRIVE SO'RASH
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- TEST DRIVE FORM -->
+
+<div class="modal" id="testModal" onclick="outsideClose(event,'testModal')">
+    <div class="modal-box">
+
+        <button class="close" onclick="closeModal('testModal')">×</button>
+
+        <form class="form-box" id="testForm">
+
+            <h2>TEST DRIVE</h2>
+            <p>Ma'lumotlaringizni kiriting.</p>
+
+            <input id="customerName" type="text" placeholder="Ismingiz" required>
+
+            <input id="customerPhone" type="tel" placeholder="Telefon raqamingiz" required>
+
+            <select id="customerCar" required>
+                <option value="">Avtomobil tanlang</option>
+            </select>
+
+            <textarea placeholder="Qo'shimcha xabar"></textarea>
+
+            <button type="submit" class="btn btn-red">
+                SO'ROVNI YUBORISH
+            </button>
+
+            <p id="formMessage" style="margin-top:15px"></p>
+
+        </form>
+
+    </div>
+</div>
+
+<script>
+
+// AVTOMOBILLAR
+
+const cars = [
+
+{
+brand:"Ferrari",
+name:"Ferrari 849 Testarossa",
+year:"2026",
+power:"1050 cv",
+speed:"330+ km/h",
+price:"$500,000+",
+image:"https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=1000&q=85",
+description:"Ferrari 849 Testarossa — V8 gibrid supercar. Zamonaviy texnologiyalar va Ferrari sport merosining uyg'unligi."
+},
+
+{
+brand:"Ferrari",
+name:"Ferrari 296 GTB",
+year:"2025",
+power:"830 cv",
+speed:"330 km/h",
+price:"$350,000+",
+image:"https://www.gallery-aaldering.com/wp-content/uploads/2025/06/ferrari-296-gtb-price-incl-bpm-2023.jpg",
+description:"296 GTB — V6 gibrid dvigatelli sport avtomobili. Kompakt dizayn va yuqori unumdorlik."
+},
+
+{
+brand:"Ferrari",
+name:"Ferrari 12Cilindri",
+year:"2025",
+power:"830 cv",
+speed:"340 km/h",
+price:"$400,000+",
+image:"https://hips.hearstapps.com/hmg-prod/images/bfada984-dd9d-4da3-9e67-ead9a9d3a9fb.jpg?crop=0.808xw:0.682xh;0.111xw,0.144xh&resize=1200:*",
+description:"12Cilindri — Ferrari an'anaviy V12 dvigateli va zamonaviy dizaynini birlashtirgan model."
+},
+
+{
+brand:"Ferrari",
+name:"Ferrari Purosangue",
+year:"2025",
+power:"725 cv",
+speed:"310 km/h",
+price:"$400,000+",
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWSeOqXo_6gp5WWhRKpDp_QfK3yQs19dIdUFzuSM49YDgcBI37CRvTgoAQ&s=10",
+description:"Purosangue — Ferrari oilasining to'rt eshikli sport avtomobili."
+},
+
+{
+brand:"Ferrari",
+name:"Ferrari Amalfi",
+year:"2026",
+power:"640 cv",
+speed:"320 km/h",
+price:"$250,000+",
+image:"https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1000&q=85",
+description:"Ferrari Amalfi — V8 dvigatelli, zamonaviy va nafis sport avtomobili."
+},
+
+{
+brand:"Ferrari",
+name:"Ferrari F80",
+year:"2025",
+power:"1200 cv",
+speed:"350 km/h+",
+price:"$3,700,000+",
+image:"https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1000&q=85",
+description:"F80 — cheklangan miqdorda ishlab chiqariladigan Ferrari supercar modeli."
+},
+
+{
+brand:"Ferrari",
+name:"Ferrari 296 GTS",
+year:"2025",
+power:"830 cv",
+speed:"330 km/h",
+price:"$380,000+",
+image:"https://hips.hearstapps.com/hmg-prod/images/01-hero-coupe-front34-16-9-1024x768-680bd38cc5467.jpg?crop=0.718xw:0.718xh;0.155xw,0.0997xh&resize=1200:*",
+description:"296 GTS — ochiladigan tomli gibrid Ferrari sport avtomobili."
+},
+
+{
+brand:"Ferrari",
+name:"Ferrari 12Cilindri Spider",
+year:"2025",
+power:"830 cv",
+speed:"340 km/h",
+price:"$450,000+",
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBrL0iZyYi8igfXvStcXiDC0I9GOes-QVMzLeWa8vueqxkjSL05PM_Ccc&s=10",
+description:"12Cilindri Spider — V12 dvigatel va ochiq tomli sport dizayni."
+},
+
+{
+brand:"Ferrari",
+name:"Ferrari 296 Speciale",
+year:"2025",
+power:"880 cv",
+speed:"330 km/h+",
+price:"$400,000+",
+image:"https://images.pistonheads.com/nimg/49791/blobid0.jpg",
+description:"296 Speciale — yuqori unumdorlikka yo'naltirilgan maxsus Ferrari modeli."
+},
+
+{
+brand:"Ferrari",
+name:"Ferrari Roma Spider",
+year:"2025",
+power:"620 cv",
+speed:"320 km/h",
+price:"$280,000+",
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU9x5zSC3ilco_SyiUQ5L3VvM9nzqh3U2POuiobbxc5Q0cKvllOUgIQpU&s=10",
+description:"Roma Spider — nafis italyan dizayni va ochiq tomli grand touring avtomobili."
+},
+
+{
+brand:"Lamborghini",
+name:"Lamborghini Revuelto",
+year:"2025",
+power:"1015 cv",
+speed:"350 km/h+",
+price:"$600,000+",
+image:"https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1000&q=85",
+description:"Revuelto — V12 gibrid supercar, Lamborghini yangi avlodining vakili."
+},
+
+{
+brand:"Lamborghini",
+name:"Lamborghini Temerario",
+year:"2026",
+power:"920 cv",
+speed:"340 km/h+",
+price:"$350,000+",
+image:"https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/0_facelift_2025/model_details_new/temerario_2/config-alt/30_04_2026/Temerario_02-Exterior-H_Chapter-Main_Still-B_Config-Alt-B-last-optim.jpg",
+description:"Temerario — V8 twin-turbo gibrid dvigatelli yangi avlod Lamborghini."
+},
+
+{
+brand:"Lamborghini",
+name:"Lamborghini Urus SE",
+year:"2025",
+power:"800 cv",
+speed:"312 km/h",
+price:"$250,000+",
+image:"https://www.topgear.com/sites/default/files/2024/10/1-Lamborghini-Urus-SE-review-2024.jpg",
+description:"Urus SE — kuchli gibrid Super SUV, sport va kundalik qulaylik uyg'unligi."
+},
+
+{
+brand:"Lamborghini",
+name:"Lamborghini Fenomeno",
+year:"2025",
+power:"1080 cv",
+speed:"350 km/h+",
+price:"Maxsus seriya",
+image:"https://img.championat.com/i4oO37VVb6SwVKGphdSNjQnWPydzY4fkacu_l39G7A0/p()/news/big/y/o/lamborghini-fenomeno_17552797272027858844.jpg",
+description:"Fenomeno — juda cheklangan miqdorda yaratilgan maxsus Lamborghini supercar."
+},
+
+{
+brand:"Lamborghini",
+name:"Lamborghini Huracan STO",
+year:"2024",
+power:"640 cv",
+speed:"310 km/h",
+price:"$330,000+",
+image:"https://platform.cstatic-images.com/xlarge/in/v2/stock_photos/b8c638a0-159c-455b-940f-0028c41d2883/8fbaeabf-9b24-48f0-a921-eaf9624393ca.png",
+description:"Huracan STO — trek tajribasidan ilhomlangan V10 sport avtomobili."
+},
+
+{
+brand:"Lamborghini",
+name:"Lamborghini Aventador",
+year:"2022",
+power:"780 cv",
+speed:"350 km/h",
+price:"$500,000+",
+image:"https://www.chicagomotorcars.com/imagetag/10697/main/l/Used-2021-Lamborghini-Aventador-SVJ-LP770-4-Roadster-RARE-Blu-Nila-Electric-Seats-Carbon-Fiber-LOADED-1789675470.jpg",
+description:"Aventador — Lamborghini V12 supercar tarixidagi mashhur model."
+},
+
+{
+brand:"Lamborghini",
+name:"Lamborghini Huracan EVO",
+year:"2024",
+power:"640 cv",
+speed:"325 km/h",
+price:"$270,000+",
+image:"https://res.cloudinary.com/unix-center/image/upload/dpr_3.0,f_auto,q_auto:best,w_860,h_600,c_fit,g_center,ar_1.33,fl_progressive/w_800,h_600,c_crop,g_center,ar_1.33,fl_progressive/l_power-rent:pzf7cbrjmfyxebjpemcs/dpr_3.0,f_auto,q_auto:good,c_limit,w_60,o_30/fl_layer_apply,g_south_east,x_20,y_14/v1779700402/power-rent/camvx1b3oarwidmjs1hq.webp",
+description:"Huracan EVO — V10 dvigatel va zamonaviy aerodinamik dizayn."
+},
+
+{
+brand:"Lamborghini",
+name:"Lamborghini Sián",
+year:"2021",
+power:"819 cv",
+speed:"350 km/h",
+price:"Maxsus seriya",
+image:"https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/0_facelift_2025/model_details/sian_roadster/sian_rds.jpg",
+description:"Sián — Lamborghini tarixidagi innovatsion gibrid V12 avtomobillaridan biri."
+},
+
+{
+brand:"Lamborghini",
+name:"Lamborghini Urus Performante",
+year:"2024",
+power:"666 cv",
+speed:"306 km/h",
+price:"$270,000+",
+image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4EdcAxBeLWG2OD6NI9bkJOyB679yIa_xlsJ8JBJZFgAkRyLFu71bFD-k&s=10",
+description:"Urus Performante — sport uslubidagi yuqori unumdor SUV."
+},
+
+{
+brand:"Lamborghini",
+name:"Lamborghini Revuelto SV",
+year:"2026",
+power:"Maxsus versiya",
+speed:"Ma'lumot aniqlashtirilmoqda",
+price:"Narx so'rov asosida",
+image:"https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1000&q=85",
+description:"Revuelto oilasining maxsus kolleksiyasi. Texnik xususiyatlar versiyaga qarab farq qilishi mumkin."
+}
+
+];
+
+let currentFilter = "All";
+let favorites = [];
+let favoriteMode = false;
+
+// KATALOGNI CHIQARISH
+
+function renderCars() {
+
+    const grid = document.getElementById("carsGrid");
+    const query = document.getElementById("search").value.toLowerCase();
+
+    const filtered = cars.filter(car => {
+
+        const brandMatch =
+        currentFilter === "All" || car.brand === currentFilter;
+
+        const searchMatch =
+        car.name.toLowerCase().includes(query);
+
+        const favoriteMatch =
+        !favoriteMode || favorites.includes(car.name);
+
+        return brandMatch && searchMatch && favoriteMatch;
+
+    });
+
+    grid.innerHTML = "";
+
+    if(filtered.length === 0) {
+        grid.innerHTML = `
+            <div class="empty">
+                <h2>😕 Avtomobil topilmadi</h2>
+                <p style="margin-top:12px">Boshqa nom bilan qidirib ko'ring.</p>
+            </div>
+        `;
+        return;
+    }
+
+    filtered.forEach(car => {
+
+        const index = cars.indexOf(car);
+        const selected = favorites.includes(car.name);
+
+        grid.innerHTML += `
+            <div class="car-card">
+
+                <div class="car-image">
+
+                    <img src="${car.image}"
+                    alt="${car.name}" loading="lazy">
+
+                    <span class="car-tag">${car.brand}</span>
+
+                    <button class="heart ${selected ? 'selected' : ''}"
+                    onclick="toggleFavorite(${index})">
+                    ${selected ? '♥' : '♡'}
+                    </button>
+
+                </div>
+
+                <div class="car-info">
+
+                    <span class="car-brand">${car.brand.toUpperCase()}</span>
+
+                    <h3>${car.name}</h3>
+
+                    <div class="specs">
+
+                        <div class="spec">
+                            📅 Ishlab chiqarilgan
+                            <strong>${car.year}</strong>
+                        </div>
+
+                        <div class="spec">
+                            ⚡ Quvvati
+                            <strong>${car.power}</strong>
+                        </div>
+
+                        <div class="spec">
+                            🏁 Maksimal tezlik
+                            <strong>${car.speed}</strong>
+                        </div>
+
+                        <div class="spec">
+                            🚘 Brend
+                            <strong>${car.brand}</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="car-bottom">
+
+                        <span class="price">${car.price}</span>
+
+                        <button class="details-btn"
+                        onclick="showDetails(${index})">
+                            BATAFSIL →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        `;
+
+    });
+
+}
+
+// FILTER
+
+function setFilter(brand) {
+
+    currentFilter = brand;
+    favoriteMode = false;
+
+    document.querySelectorAll(".filter").forEach(button => {
+        button.classList.toggle(
+            "active",
+            button.dataset.filter === brand
+        );
+    });
+
+    renderCars();
+
+    document.getElementById("catalog").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+// FAVORITES
+
+function toggleFavorite(index) {
+
+    const name = cars[index].name;
+
+    if(favorites.includes(name)) {
+        favorites = favorites.filter(item => item !== name);
+    } else {
+        favorites.push(name);
+    }
+
+    document.getElementById("favCount").textContent = favorites.length;
+
+    renderCars();
+}
+
+function showFavorites() {
+
+    favoriteMode = true;
+    currentFilter = "All";
+
+    document.querySelectorAll(".filter").forEach(button => {
+        button.classList.toggle(
+            "active",
+            button.dataset.filter === "All"
+        );
+    });
+
+    document.getElementById("search").value = "";
+
+    renderCars();
+
+    document.getElementById("catalog").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+// DETAILS MODAL
+
+function showDetails(index) {
+
+    const car = cars[index];
+
+    document.getElementById("detailImage").src = car.image;
+    document.getElementById("detailName").textContent = car.name;
+    document.getElementById("detailBrand").textContent = car.brand.toUpperCase();
+
+    document.getElementById("detailDescription").textContent =
+    car.description;
+
+    document.getElementById("detailSpecs").textContent =
+    `Yili: ${car.year} | Quvvati: ${car.power} | Tezligi: ${car.speed}`;
+
+    document.getElementById("detailPrice").textContent = car.price;
+
+    document.getElementById("detailsModal").classList.add("active");
+
+}
+
+// MODAL
+
+function closeModal(id) {
+    document.getElementById(id).classList.remove("active");
+}
+
+function outsideClose(event,id) {
+    if(event.target.id === id) closeModal(id);
+}
+
+// TEST DRIVE
+
+function openTest() {
+    document.getElementById("testModal").classList.add("active");
+}
+
+const carSelect = document.getElementById("customerCar");
+
+cars.forEach(car => {
+
+    const option = document.createElement("option");
+
+    option.value = car.name;
+    option.textContent = car.name;
+
+    carSelect.appendChild(option);
+
+});
+
+document.getElementById("testForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("customerName").value.trim();
+    const phone = document.getElementById("customerPhone").value.trim();
+    const car = document.getElementById("customerCar").value;
+
+    if(!name || !phone || !car) return;
+
+    document.getElementById("formMessage").textContent =
+    "Forma to'ldirildi! Haqiqiy yuborish uchun server yoki Telegram bot ulash kerak.";
+
+    this.reset();
+
+});
+
+// MOBILE MENU
+
+function toggleMenu() {
+    document.getElementById("nav").classList.toggle("show");
+}
+
+document.querySelectorAll("#nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+        document.getElementById("nav").classList.remove("show");
+    });
+
+});
+
+// ESCAPE
+
+document.addEventListener("keydown", event => {
+
+    if(event.key === "Escape") {
+        closeModal("detailsModal");
+        closeModal("testModal");
+    }
+
+});
+
+// START
+
+renderCars();
+
+</script>
+
+</body>
+</html>
